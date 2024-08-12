@@ -1,0 +1,3 @@
+[autorun]
+action=PDIメディアランチャーを開く
+shellexecute="PDSV\LNCHR\PLNC.EXE"

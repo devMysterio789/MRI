@@ -1,0 +1,1 @@
+start PDSV\LNCHR\PLNC.EXE

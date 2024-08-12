@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>画像ビューワー Ver1.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="stylesheet" type="text/css" href="DESIGN/BASE.CSS">
+<link rel="stylesheet" type="text/css" href="DESIGN/BASESUB.CSS">
+<link rel="stylesheet" type="text/css" href="DESIGN/BASEEIM.CSS">
+</head>
+<body>
+<div id="container">
+    <div id="Header">&nbsp;画像拡大表示
+        <div>
+            <a href="IM010108.HTM" id="HeaderABack"><img src="DESIGN/BT_BCK_N.PNG"><span>戻る</span></a>
+            <a href="../INDEX.HTM" id="HeaderATop"><img src="DESIGN/BT_HOM_N.PNG"><span>TOP</span></a>
+        </div>
+    </div>
+    <div id="SpacerDiv"> <!-- これがないと「添付ファイルを開く」と下のテーブルが重なる -->
+    </div>
+    <div align="center">
+        <table class="subTable">
+            <tr class="subTableDark">
+            <th>患者ID:</th>
+            <td>0044543297</td>
+            <th>患者名:</th>
+            <td>ｱﾋﾞｼｪｰﾜ ﾊﾞﾄﾞｳﾘｬ .../アビシェーワ バドウリャ シュ</td>
+            </tr>
+            <tr class="subTableBright">
+            <th>生年月日: </th>
+            <td>2024/02/08</td>
+            <th>性別:</th>
+            <td>M</td>
+            </tr>
+            <tr class="subTableDark">
+            <th>検査日:</th>
+            <td>2024/02/23</td>
+            <th>検査時刻:</th>
+            <td>11:04:51</td>
+            </tr>
+            <tr class="subTableBright">
+            <th>検査説明:</th>
+            <td>Head-P</td>
+            <th>シリーズ説明:</th>
+            <td>Head Bone,,Sagittal,2.000,Sagittal,MPR,3D-Q03</td>
+            </tr>
+            <tr class="subTableDark">
+            <th>モダリティ:</th>
+            <td>CT</td>
+            <th>ページ:</th>
+            <td id="pageno">1 / 52</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+            <td align="center">
+            <div class="OpeComment">■操作ボタンで画像をスクロールできます。</div>
+            <div class="imgNavi">
+            <img onclick=imgmove(-5) height=17 width=34 src="DESIGN/GO_BACK3.GIF">
+            <img onclick=imgmove(-3) height=18 width=27 src="DESIGN/GO_BACK2.GIF">
+            <img onclick=imgmove(-1) height=18 width=17 src="DESIGN/GO_BACK.GIF">
+            <img onclick=imgmove(1)  height=17 width=16 src="DESIGN/GO_NEXT.GIF">
+            <img onclick=imgmove(3)  height=17 width=25 src="DESIGN/GO_NEXT2.GIF">
+            <img onclick=imgmove(5)  height=17 width=33 src="DESIGN/GO_NEXT3.GIF">
+            </div>
+            <img id="img1" src="../IMAGE/D0000232.JPG">
+            </td>
+            </tr>
+        </table>
+    </div><script type="text/javascript">
+<!--
+var imgcnt = 1;
+var imgmax = 52;
+var imagfilename = new Array();
+imagfilename[0] = 'IMAGE/D0000232.JPG';
+imagfilename[1] = 'IMAGE/D0000233.JPG';
+imagfilename[2] = 'IMAGE/D0000234.JPG';
+imagfilename[3] = 'IMAGE/D0000235.JPG';
+imagfilename[4] = 'IMAGE/D0000236.JPG';
+imagfilename[5] = 'IMAGE/D0000237.JPG';
+imagfilename[6] = 'IMAGE/D0000238.JPG';
+imagfilename[7] = 'IMAGE/D0000239.JPG';
+imagfilename[8] = 'IMAGE/D0000240.JPG';
+imagfilename[9] = 'IMAGE/D0000241.JPG';
+imagfilename[10] = 'IMAGE/D0000242.JPG';
+imagfilename[11] = 'IMAGE/D0000243.JPG';
+imagfilename[12] = 'IMAGE/D0000244.JPG';
+imagfilename[13] = 'IMAGE/D0000245.JPG';
+imagfilename[14] = 'IMAGE/D0000246.JPG';
+imagfilename[15] = 'IMAGE/D0000247.JPG';
+imagfilename[16] = 'IMAGE/D0000248.JPG';
+imagfilename[17] = 'IMAGE/D0000249.JPG';
+imagfilename[18] = 'IMAGE/D0000250.JPG';
+imagfilename[19] = 'IMAGE/D0000251.JPG';
+imagfilename[20] = 'IMAGE/D0000252.JPG';
+imagfilename[21] = 'IMAGE/D0000253.JPG';
+imagfilename[22] = 'IMAGE/D0000254.JPG';
+imagfilename[23] = 'IMAGE/D0000255.JPG';
+imagfilename[24] = 'IMAGE/D0000256.JPG';
+imagfilename[25] = 'IMAGE/D0000257.JPG';
+imagfilename[26] = 'IMAGE/D0000258.JPG';
+imagfilename[27] = 'IMAGE/D0000259.JPG';
+imagfilename[28] = 'IMAGE/D0000260.JPG';
+imagfilename[29] = 'IMAGE/D0000261.JPG';
+imagfilename[30] = 'IMAGE/D0000262.JPG';
+imagfilename[31] = 'IMAGE/D0000263.JPG';
+imagfilename[32] = 'IMAGE/D0000264.JPG';
+imagfilename[33] = 'IMAGE/D0000265.JPG';
+imagfilename[34] = 'IMAGE/D0000266.JPG';
+imagfilename[35] = 'IMAGE/D0000267.JPG';
+imagfilename[36] = 'IMAGE/D0000268.JPG';
+imagfilename[37] = 'IMAGE/D0000269.JPG';
+imagfilename[38] = 'IMAGE/D0000270.JPG';
+imagfilename[39] = 'IMAGE/D0000271.JPG';
+imagfilename[40] = 'IMAGE/D0000272.JPG';
+imagfilename[41] = 'IMAGE/D0000273.JPG';
+imagfilename[42] = 'IMAGE/D0000274.JPG';
+imagfilename[43] = 'IMAGE/D0000275.JPG';
+imagfilename[44] = 'IMAGE/D0000276.JPG';
+imagfilename[45] = 'IMAGE/D0000277.JPG';
+imagfilename[46] = 'IMAGE/D0000278.JPG';
+imagfilename[47] = 'IMAGE/D0000279.JPG';
+imagfilename[48] = 'IMAGE/D0000280.JPG';
+imagfilename[49] = 'IMAGE/D0000281.JPG';
+imagfilename[50] = 'IMAGE/D0000282.JPG';
+imagfilename[51] = 'IMAGE/D0000283.JPG';
+function imgmove(imgid){
+	var img1 = document.getElementById("img1");
+	var pageno = document.getElementById("pageno");
+	imgcnt = imgcnt + imgid
+	if (imgid == 0){
+		img1.src = imagfilename[imgcnt - 1];
+		if (typeof pageno.textContent != "undefined") {
+			// for Firefox
+			pageno.textContent = imgcnt + ' / ' + imgmax;
+		} else {
+			pageno.innerText = imgcnt + ' / ' + imgmax;
+		}
+	}
+	else {
+		if (imgcnt <= 0){
+			imgcnt = 1;
+		}
+		if (imgcnt >= imgmax) {
+			imgcnt = imgmax;
+		}
+		document.cookie = "imgno=" + escape(imgcnt) + ";";
+		if(imgcnt > 0  && imgcnt <= imgmax){
+			img1.src = imagfilename[imgcnt - 1];
+			if (typeof pageno.textContent != "undefined") {
+				// for Firefox
+				pageno.textContent = imgcnt + ' / ' + imgmax;
+			} else {
+				pageno.innerText = imgcnt + ' / ' + imgmax;
+			}
+		}
+		else {
+			imgcnt = imgcnt - imgid 
+		}
+	}
+}
+function imgset(value){
+	imgcnt = eval(value)
+	imgmove(0)
+}
+	function init() {
+
+		// quit if this function has already been called
+		if (arguments.callee.done) { return; }
+
+		// flag this function so we don't do the same thing twice
+		arguments.callee.done = true;
+
+		// kill the timer
+		if (_timer) {
+			clearInterval(_timer);
+			_timer = null;
+		}
+
+		var imgno = 1;
+		var cookies = unescape(document.cookie + ";");
+		var n_point = cookies.indexOf("imgno");
+		var n_start = cookies.indexOf("=", n_point ) + 1;
+		var n_end   = cookies.indexOf(";", n_point);
+
+		if ( n_point > -1 ) {
+			imgno = cookies.substring( n_start, n_end );
+			imgset(imgno);
+		}
+		else{
+			var urlParameter = window.location.search.substring(1);
+			var keyvalue = urlParameter.split('=');
+			if( keyvalue[0] == 'imgno' ){
+				imgno = keyvalue[1];
+				imgset(imgno);
+			}
+		}
+	};
+	/* for Mozilla */
+	if (document.addEventListener) {
+		document.addEventListener("DOMContentLoaded", init, false);
+	}
+
+	/* for Internet Explorer */
+	/*@cc_on @*/
+	/*@if (@_win32)
+		document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+		var script = document.getElementById("__ie_onload");
+		script.onreadystatechange = function() {
+			if (this.readyState == "complete") {
+				init(); // call the onload handler
+			}
+		};
+	/*@end @*/
+
+	/* for Safari */
+	if (/WebKit/i.test(navigator.userAgent)) { // sniff
+		var _timer = setInterval(function() {
+			if (/loaded|complete/.test(document.readyState)) {
+				init(); // call the onload handler
+			}
+		}, 10);
+	}
+
+	/* for other browsers */
+	window.onload = init;
+
+//-->
+</script>
+
+    <table class="copyRight">
+        <tr>
+        <td>
+        <hr>
+        Copyright JRC Engineering Co., Ltd. All rights reserved.
+        </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
